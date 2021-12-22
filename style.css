@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&family=Righteous&family=Roboto+Condensed&family=Ubuntu:wght@300&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ece9e6;
+    background-image: linear-gradient(to right, #fff, #ece9e6);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Ubuntu';
+}
+
+.mobile-container {
+    width: 400px;
+    background-color: white;
+    box-shadow: 0 0 10px 2px #3333331a;
+    border-radius: 0.3rem;
+    overflow: hidden;
+}
+
+header {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header input {
+    background-color: #eee;
+    border: none;
+    border-radius: 0.1rem;
+    padding: 0.3rem 1rem;
+    outline: none;
+    font-family: monospace;
+}
+
+header button {
+    background-color: transparent;
+    color: rgb(138, 129, 141);
+    font-size: 1.5rem;
+    border: none;
+    margin-left: 1.5rem;
+    cursor: pointer;
+}
+
+.fav-container {
+    padding: 0.25rem 1rem;
+    text-align: center;
+    background-color: rgba(233, 199, 255, 0.5);
+}
+
+.fav-meals {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.fav-meals li {
+    width: 75px;
+    position: relative;
+}
+
+.fav-meals li .clear {
+    background-color: transparent;
+    color: rebeccapurple;
+    opacity: 0;
+    position: absolute;
+    top: -0.5rem;
+    right: -0rem;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.fav-meals li:hover .clear {
+    opacity: 1;
+}
+
+.fav-meals li img {
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px 2px #3333331a;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+.fav-meals li span {
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 70px;
+    display: inline-block;
+    transition: transform 5s ease;
+}
+
+.fav-meals li:hover span {
+    white-space: normal;
+    overflow: auto;
+    transform: translateY(-5px);
+}
+
+.meal {
+    margin: 1.5rem;
+    box-shadow: 0 0 10px 2px #3333331a;
+    border-radius: 0.1rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.meal-header {
+    position: relative;
+} 
+
+.meal-header .random {
+    position: absolute;
+    top: 1rem;
+    background-color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-top-right-radius: 5px;
+}
+
+.meal-header img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.meal-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.meal-body h4 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.meal-body .fav-btn {
+    background-color: transparent;
+    border: none;
+    color: rgb(197, 188, 188);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.meal-body .fav-btn:active {   
+    color: rebeccapurple;
+}
+
+.popup-container {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.popup-container.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popup {
+    background-color: #fff;
+    margin-top: 100rem;
+    max-width: 600px;
+    width: 100%;
+    padding: 0 3rem;
+    border-radius: 5px;
+    position: relative;
+}
+
+.popup p {
+    line-height: 1.5;
+}
+
+.popup .close-popup {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.popup .close-popup:hover {
+    color: rebeccapurple;
+}
+
+.meal-info h2 {
+    text-align: center;
+}
